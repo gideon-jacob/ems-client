@@ -30,7 +30,7 @@ export function useDigitalTwin() {
             // Logic 1: Supply Temp fluctuates based on Cooling Valve
             // If valve is > 50%, temp drops. If < 50%, temp rises.
             // Target is generally setpoint (e.g., 21C)
-            const targetTemp = controls.tempSetpoint;
+            //? const targetTemp = controls.tempSetpoint;
             const coolingPower = controls.coolingValve / 100;
 
             // Simple thermal model: 

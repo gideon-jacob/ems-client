@@ -38,6 +38,8 @@ export type TimeRange = "1H" | "24H" | "7D" | "30D";
 
 export function useTrendData(zoneId: string, system: "HVAC" | "BMS" | "EMS" | "ALL" = "ALL", range: TimeRange = "24H") {
     const [data, setData] = useState<TrendDataPoint[]>([])
+    
+    console.log(system)
 
     // Generate Initial Data based on Range
     useEffect(() => {
@@ -47,7 +49,7 @@ export function useTrendData(zoneId: string, system: "HVAC" | "BMS" | "EMS" | "A
 
         let points = 96; // Default 24H (15m intervals)
         let intervalMs = 15 * 60 * 1000;
-        let cycleDurationMs = 24 * 60 * 60 * 1000; // 24h cycle for diurnal
+        // let cycleDurationMs = 24 * 60 * 60 * 1000; // 24h cycle for diurnal
 
         switch (range) {
             case "1H":
