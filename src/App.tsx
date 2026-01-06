@@ -1,9 +1,8 @@
-function App() {
+import { DashboardLayout } from "./components/DashboardLayout"
 
+function App() {
   return (
-      <h1>
-        Hello World
-      </h1>
+    <DashboardLayout />
   )
 }
 
