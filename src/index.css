@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Deep Blue / Slate Theme - Defaulting to Dark Mode values for this design */
+    --background: 224 35% 10%;
+    /* #111421 - Very dark slate/blue background */
+    --foreground: 210 40% 98%;
+    /* White text */
+
+    --card: 224 30% 16%;
+    /* #1d2135 - Slightly lighter card bg */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 30% 16%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 221 83% 53%;
+    /* #2563EB - Bright Blue (Executive Button) */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 224 25% 20%;
+    /* Lighter blue for secondary elements */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 224 20% 25%;
+    /* Subtle border */
+    --input: 224 20% 25%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.5rem;
+
+    /* Chart Colors match the design */
+    --chart-1: 221 83% 53%;
+    /* Blue */
+    --chart-2: 160 60% 45%;
+    /* Green (Teal) */
+    --chart-3: 30 80% 55%;
+    /* Orange/Yellow */
+    --chart-4: 280 65% 60%;
+    /* Purple */
+    --chart-5: 0 84% 60%;
+    /* Red */
+  }
+
+  /* Keeping dark class same as root for consistency if toggled */
+  .dark {
+    --background: 224 35% 10%;
+    --foreground: 210 40% 98%;
+    --card: 224 30% 16%;
+    --card-foreground: 210 40% 98%;
+    --popover: 224 30% 16%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 224 25% 20%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 224 20% 25%;
+    --input: 224 20% 25%;
+    --ring: 221 83% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
